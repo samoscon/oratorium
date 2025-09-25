@@ -1,7 +1,7 @@
 {
   "name": "samoscon/oratorium",
   "description": "MVC Framework to manage Members, Activities and Subscriptions in a ticketingsystem",
-  "tag": "v1.0",
+  "tag": "v1.0.0",
   "keywords": [
     "members",
     "payments",
