@@ -1,0 +1,7 @@
+{
+    "require": {
+        "symfony/mailer": "^7.0",
+        "mollie/mollie-api-php": "^2.0"
+    }
+}
+
