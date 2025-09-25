@@ -1,10 +1,12 @@
 {
   "name": "samoscon/oratorium",
-  "description": "MVC Framework to manage Members, Activities and Subscriptions",
+  "description": "MVC Framework to manage Members, Activities and Subscriptions in a ticketingsystem",
+  "tag": "v1.0",
   "keywords": [
     "members",
     "payments",
     "activities",
+    "costitems",
     "subscriptions"
   ],
   "homepage": "https://ticketingsystem.link",
@@ -20,4 +22,3 @@
         "mollie/mollie-api-php": "^2.0"
     }
 }
-
