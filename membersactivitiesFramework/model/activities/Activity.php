@@ -71,7 +71,7 @@ abstract class Activity extends \db\DomainObject {
     }
     
     /**
-     * Returns the effective paid amount for this Activity
+     * Returns the effective paid amount for this Activity or ActivityComposite
      * 
      * @return float Returns an array with a subject and a body
      */
