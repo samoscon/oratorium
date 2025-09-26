@@ -69,4 +69,25 @@ abstract class Activity extends \db\DomainObject {
         $duedate = date('Y-m-d', strtotime(str_replace("/", "-", $this->duedate)));
         return $duedate < date('Y-m-d');
     }
+    
+    /**
+     * Returns the effective paid amount for this Activity
+     * 
+     * @return float Returns an array with a subject and a body
+     */
+    public function getTotalAmountReceived(): float {
+        $total = 0;
+        $paymentIdsAdded = array();
+        foreach ($this->costitems as $costitem) {
+            foreach ($costitem->subscriptions as $subscription) {
+                if(array_search($subscription->payment->getId(), $paymentIdsAdded) === false) {
+                    if ($subscription->payment->status === 'paid') {
+                        $total += $subscription->payment->amount;
+                    }
+                    $paymentIdsAdded[] = $subscription->payment->getId();
+                }
+            }
+        }
+        return $total;
+    }
 }
